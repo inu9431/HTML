@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>설문조사</title>
+</head>
+<body>
+    <h1>설문조사</h1>
+    <p>핸드폰 설문조사</p>
+    <hr>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>아이폰</th>
+                <th>삼성</th>
+                <th>LG</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>아이폰15</td>
+            <td>갤럭시s25</td>
+            <td>G8</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>인기 1위</td>
+            <td>인기 2위</td>
+            <td>인기 3위</td>
+        </tr>
+    </tfoot>
+    </table>
+    <hr>
+        <section>
+            <h2>핸드폰을 구매 설문</h2>
+        <form action="#" method="post">
+            <fieldset>
+                <legend>핸드폰 구매</legend>
+        <label for="phone-select">핸드폰을 선택하세요:</label> <br>
+        <select id="phone-select" name="phone">
+            <option value="아이폰">아이폰</option>
+            <option value="삼성">삼성</option>
+            <option value="LG">LG</option>
+        </select>
+        <label for="other">다른폰을 보고싶다면 써주세요</label><br>
+        <textarea id="other" name="otherphone" rows="5" cols="30"></textarea>
+
+        <br><br>
+        <button type="submit">제출</button>
+        </fieldset>
+    </form>
+    </section>
+    
+    <footer>
+    <hr>
+    <p>&copy; 2025 핸드폰 설문조사 페이지</p>
+    </footer>
+</body>
+</html>
