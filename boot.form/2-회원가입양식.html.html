@@ -5,40 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입 양식</title>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
+</head>
 <body>
     <div id="container">
         <form id="form" action="#">
             
                 <!-- 아이디-->
                 <div class="row mb-3 align-items-center">
-                    <label class="col-sm-3 col-form-label" name="id">아이디<span class="text-danger">*</span></label><br>
+                    <label for ="userId" class="col-sm-3 col-form-label" >
+                        아이디<span class="text-danger">*</span>
+                    </label>
                     <div class="col-sm-9">
-                        <input class="form-control" placeholder="아이디를 입력해주세요">
+                        <input id="userId" name="userId" class="form-control" placeholder="아이디를 입력해주세요">
                     </div>
                 </div>
                 <!-- 비밀번호 -->
-                    <ddiv class="row mb-3 align-items-center">
-                        <label class="col sm-3 col-form-label">비밀번호<span class="text-danger">*</span></label><br>
-                        <input type="password" name="pw2"  class="form-control"  placeholder="비밀번호를 입력해 주세요">
+                    <div class="row mb-3 align-items-center">
+                        <label for="password" class="col-sm-3 col-form-label">
+                            비밀번호<span class="text-danger">*</span>
+                        </label>
+                        <div class="col-sm-9">
+                        <input id="password" type="password" name="pw1"  class="form-control"  placeholder="비밀번호를 입력해 주세요">
+                        </div>
                     </div>
+
                     <!-- 비밀번호 확인-->
-                     <div class="row mb-3 align-items-center">
-                        <label class="col sm-3 col-form-label">비밀번호 확인<span class="text-danger">*</span></label><br>
-                        <input type="password" name="pw2"  class="form-control" placeholder="비밀번호를 한번더 입력해주세요">
+                <div class="row mb-3 align-items-center">
+                    <label for="confirmPassword" class="col-sm-3 col-form-label">
+                        비밀번호 확인<span class="text-danger">*</span>
+                    </label>
+                    <div class="col-sm-9">
+                        <input id="confirmPassword" type="password" name="pw2" class="form-control" placeholder="비밀번호를 한번 더 입력해주세요">
                     </div>
+                </div>
+
                     <!-- 이름-->
                     <div class="row mb-3 align-items-center">
-                        <label for="col-sm-3 col-form-label">이름<span class="text-danger">*</span></label><br>
-                        <div>
-                            <input type="text"  class="form-control"  id="floatingPassword" placeholder="이름을 입력해주세요">
+                        <label for="username" class="col-sm-3 col-form-label">이름<span class="text-danger">*</span></label>
+                        <div class="col-sm-9">
+                            <input type="text"  class="form-control"  id="username" placeholder="이름을 입력해주세요">
                         </div>
                     </div>
                     <!-- 전화번호-->
-                    <div class="row md-3 align-items-center">
-                        <label class="col-sm-3 col-form-label">전화번호</label><br>
-                        <div class="col-sm-6">
-                        <input type="text" class="form-control"  placeholder="숫자만 입력해주세요" autocomplete="off" >
+                    <div class="row mb-3 align-items-center">
+                        <label for="phone" class="col-sm-3 col-form-label">전화번호</label>
+                        <div class="col-sm-9">
+                        <input id="phone" type="text" name="phone" class="form-control"  placeholder="숫자만 입력해주세요" autocomplete="off" >
                         </div>
                     </div>
                     <!-- 성별-->
@@ -46,9 +58,9 @@
                         <label class="col-sm-3 col-form-label">성별</label>
                     <div class="col-sm-9 d-flex gap-3">
                         <div class="form-check">
-                        <input class="form-check-input" type="radio" name="gender" id="male">
-                        <label class="form-check-label" for="male">남자</label>
-                        </div>
+                            <input class="form-check-input" type="radio" name="gender" id="male">
+                            <label class="form-check-label" for="male">남자</label>
+                    </div>
                         <div class="form-check">
                         <input class="form-check-input" type="radio" name="gender" id="female">
                         <label class="form-check-label" for="female">여자</label>
@@ -60,32 +72,33 @@
                     </div>
                     </div>
                     <!-- 이메일-->
-                    <div class="row mb-3 align-items-center">
-                        <label for="col-sm-3 col-form-label">이메일<span class="text-danger">*</span></label><br>
-                        <div class="col-sm-5">
-                            <input type="text"  class="form-control" placeholder="예 ozcoding">
-                        </div>
-                </div>
+                <div class="row mb-3 align-items-center">
+                    <label for="email" class="col-sm-3 col-form-label">
+                        이메일<span class="text-danger">*</span>
+                    </label>
+                    <div class="col-sm-5">
+                        <input id="email" type="text"  class="form-control" placeholder="예 ozcoding">
+                    </div>
+                    
                     <div class="col-sm-4">
                         <select class="form-select">
                             <option >선택하기</option>
                             <option >@naver.com</option>
-                            <option >@gamil.com</option>
+                            <option >@gmail.com</option>
                             <option >@daum.com</option>
                         </select>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label class="col-sm3 col-form-label">생년월일</label>
+                    <label class="col-sm-3 col-form-label">생년월일</label>
                     <div class="col-sm-9 d-flex gap-2">
-                        <input type="text" class="form-control" placeholder="YYYY">
-                        <input type="text" class="form-control" placeholder="MM">
-                        <input type="text" class="form-control" placeholder="DD">
+                        <input type="text" name="YYYY" class="form-control" placeholder="YYYY">
+                        <input type="text" name="MM" class="form-control" placeholder="MM">
+                        <input type="text" name="DD" class="form-control" placeholder="DD">
                     </div>
                 </div>
-            <div class="buttons">
-                <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off">
-                <label class="btn btn-primary" for="btn-check">가입</label>
+            <div class="buttons text-center">
+                <button type="submit" class="btn btn-primary">가입</button>
             </div>
         </form>
     </div>
